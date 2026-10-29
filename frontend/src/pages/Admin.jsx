@@ -6,7 +6,7 @@ import {
   Lightbulb, BookOpen, PhoneCall, Users, Eye, EyeOff
 } from "lucide-react";
 
-const API_URL = "http://localhost:8000";
+const API_URL = "https://prige-backend.onrender.com";
 const ADMIN_PASSWORD = "prige2026";
 
 const defaultImages = [
