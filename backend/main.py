@@ -16,10 +16,12 @@ if not os.path.exists(UPLOAD_DIR):
 app.mount("/uploads", StaticFiles(directory=UPLOAD_DIR), name="uploads")
 
 db_config = {
-    "host": "localhost",
-    "user": "root",
-    "password": "0987654321", # YOUR MYSQL PASSWORD HERE
-    "database": "prige_db"
+    "host": os.getenv("DB_HOST", "localhost"),
+    "user": os.getenv("DB_USER", "root"),
+    "password": os.getenv("DB_PASSWORD", "0987654321"),
+    "database": os.getenv("DB_NAME", "prige_db"),
+    "port": int(os.getenv("DB_PORT", 3306)),
+    "ssl_disabled": os.getenv("DB_SSL_DISABLED", "true") == "true"
 }
 
 def get_db():
