@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 
 const API_URL = "https://prige-backend.onrender.com";
-const ADMIN_PASSWORD = "prige2026";
+const ADMIN_PASSWORD = "prige_ltd@2026!!";
 
 const defaultImages = [
   "https://prige-ltd-1.vercel.app/images/avocado-blossom.png",
